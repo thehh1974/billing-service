@@ -9,6 +9,10 @@ before_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker build -t haimhelman/octarine-python:billing-service .
 
+install:
+
 after_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push haimhelman/octarine-python:billing-service
+
+script:
