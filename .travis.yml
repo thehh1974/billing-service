@@ -12,7 +12,7 @@ before_install:
 install:
   -
 
-after_install:
+after_success:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
   - docker push haimhelman/octarine-python:billing-service
 
