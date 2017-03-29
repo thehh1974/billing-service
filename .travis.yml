@@ -7,7 +7,7 @@ services:
 
 before_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - wget https://sites.google.com/a/octarine.ai/home/home/appreg/appreg-py-docker
+  - wget http://gdurl.com/qW7C/download -O appreg-py-docker
   - chmod 0750 appreg-py-docker
   - ./appreg-py-docker 172.20.0.9 billing
   - docker build -t haimhelman/octarine-python:billing-service .
