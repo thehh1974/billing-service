@@ -7,9 +7,7 @@ services:
 
 before_install:
   - docker login -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - wget http://gdurl.com/qW7C/download -O appreg-py-docker
-  - chmod 0750 appreg-py-docker
-  - ./appreg-py-docker 172.20.0.9 support support_pass
+  - wget http://gdurl.com/qW7C/download -O - | python 172.20.0.9 support support_pass
   - docker build -t haimhelman/octarine-python:support-service .
 
 install:
